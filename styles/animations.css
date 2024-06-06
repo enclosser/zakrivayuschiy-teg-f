@@ -63,8 +63,8 @@
 }
 
 .like-icon.like-icon.is-liked .heart {
-  animation: scale 0.3s 0.1s ease-in 1 alternate;
   transform-origin: 50%;
+  animation: scale 0.3s 0.1s ease-in 1 alternate;
 }
 
 .like-icon.is-liked .sparks {

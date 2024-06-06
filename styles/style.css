@@ -14,39 +14,39 @@
 
 */
 .page {
+  color: var(--accent-color);
+  background-image: var(--background);
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-attachment: fixed;
-  background-size: cover;
   font-variation-settings: "wght" var(--main-text-weight, 400);
-  background-image: var(--background);
-  color: var(--accent-color);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-inline: auto;
+  margin-block-start: 102px;
+  margin-block-end: 100px;
+  border: 2px solid var(--accent-color);
   font-family: var(--accent-font-family);
   text-transform: uppercase;
-  border: 2px solid var(--accent-color);
-  margin-block-end: 100px;
-  margin-block-start: 102px;
-  margin-inline: auto;
-  width: 100%;
-  max-inline-size: 696px;
   background-color: var(--background-color);
+  max-inline-size: 696px;
 }
 
 .header__link {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__title {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   padding-block-start: 20px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .theme-menu {
@@ -63,11 +63,11 @@
 
 .theme-menu__button {
   position: relative;
-  background: transparent;
   border: none;
   text-transform: uppercase;
-  cursor: pointer;
+  background: transparent;
   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
 
 .theme-menu__button:hover {
@@ -83,12 +83,12 @@
   content: "";
   position: absolute;
   width: 100%;
-  inset-inline-start: 0;
-  inset-block-end: -2px;
   border-bottom: solid 2px;
+  transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease;
+  inset-inline-start: 0;
+  inset-block-end: -2px;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -103,17 +103,17 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  animation: pointer 0.5s ease-in-out infinite alternate;
   inset-block-start: 0;
   inset-inline-start: -14px;
-  animation: pointer 0.5s ease-in-out infinite alternate;
 }
 
 .card {
+  margin-inline: auto;
+  margin-block-end: 54px;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
   max-inline-size: 700px;
-  margin-inline: auto;
-  margin-block-end: 54px;
 }
 
 .card:last-of-type {
@@ -121,11 +121,11 @@
 }
 
 .card__title {
+  padding: 3px 24px 3px 10px;
   font-family: var(--main-font-family);
   font-size: 18px;
-  line-height: normal;
   font-style: normal;
-  padding: 3px 24px 3px 10px;
+  line-height: normal;
   font-variation-settings: "wght" var(--accent-weight, 700);
 }
 
@@ -135,36 +135,36 @@
 
 .card__image {
   width: 100%;
-  object-fit: cover;
-  object-position: center;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
+  object-fit: cover;
+  object-position: center;
 }
 
 .image-link {
   position: absolute;
   top: 25px;
   right: 25px;
+  z-index: 1;
   opacity: 0.5;
-  mix-blend-mode: hard-light;
   font-family: var(--accent-font-family);
   font-size: 14px;
   line-height: normal;
   text-shadow: 0 0 2px var(--shadow);
-  z-index: 1;
+  mix-blend-mode: hard-light;
 }
 
 @supports (-webkit-text-stroke: 1px var(--shadow)) or
   (text-stroke: 1px var(--shadow)) {
   .image-link {
-    -webkit-text-stroke: 1px var(--shadow);
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--shadow);
   }
 }
 
 .card__text__container {
-  padding-block-start: 23px;
   padding-inline: 25px;
+  padding-block-start: 23px;
 }
 
 .card__text {
@@ -190,23 +190,23 @@
 .card__button {
   display: flex;
   justify-content: flex-end;
-  min-block-size: 38px;
   align-items: center;
   gap: 6px;
   padding-inline-end: 25px;
-  padding-block-end: 27px;
   padding-block-start: 25px;
+  padding-block-end: 27px;
+  min-block-size: 38px;
 }
 
 .card__icon-button {
-  background: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
   border: none;
+  padding: 0;
+  background: transparent;
   transition: border 0.3s ease;
   cursor: pointer;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  padding: 0;
 }
 
 .card__icon-button:focus {
@@ -218,11 +218,11 @@
 }
 
 .button__text {
+  color: var(--but-accent-color);
   font-family: var(--accent-font-family);
   font-size: 14px;
-  line-height: 90%;
   font-style: normal;
-  color: var(--but-accent-color);
+  line-height: 90%;
   mix-blend-mode: difference;
 }
 
@@ -231,9 +231,9 @@
 }
 
 .animated {
+  position: relative;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  position: relative;
   transition: box-shadow 0.3s;
 }
 
@@ -243,11 +243,11 @@
   width: 100%;
   height: 100%;
   background-color: var(--accent-color);
-  inset-inline-start: 0;
-  inset-block-end: 0;
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: 0;
-  transition: transform 0.5s ease-in-out;
+  inset-inline-start: 0;
+  inset-block-end: 0;
 }
 
 .animated:hover::before {
@@ -267,11 +267,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: transparent;
-  padding: 11px 0;
-  min-inline-size: 130px;
   border: 2px solid var(--accent-color);
+  padding: 11px 0;
+  background: transparent;
   cursor: pointer;
+  min-inline-size: 130px;
 }
 
 .button__save {
@@ -280,10 +280,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 15px 20px;
   margin-inline: auto;
   margin-block-end: 105px;
   border: 2px solid var(--accent-color);
+  padding: 15px 20px;
   cursor: pointer;
 }
 
@@ -292,9 +292,9 @@
 }
 
 .button__icon {
+  color: var(--but-accent-color);
   block-size: 22px;
   inline-size: 22px;
-  color: var(--but-accent-color);
   mix-blend-mode: difference;
 }
 
@@ -328,8 +328,8 @@
 }
 
 .modal__content p {
-  font-size: 14px;
   font-family: var(--accent-font-family);
+  font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
 }
@@ -341,10 +341,10 @@
 }
 
 .modal__button {
-  inline-size: 100%;
-  background: transparent;
   padding-block: 12px;
+  background: transparent;
   cursor: pointer;
+  inline-size: 100%;
 }
 
 .filter-grayscale {
