@@ -1,12 +1,12 @@
-# Учебный Проект Яндекс практикума ono-tebe-nado
-В ходе проекта требовалось разработать frontend сайта - Оно тебе надо. Сайт представляет из себя интернет-аукцион вещей, в которые никто не верил. Изначально для разработки проекта был дан макет в figma и требовалось сверстать его в HTML.
+# Учебный Проект Яндекс практикума Закрвающий тег
+В ходе проекта требовалось разработать frontend сайта - по шаблону. Используя фильтры градиенты и svg
 
 
-[![2024-03-29-01-21-00.png](https://i.postimg.cc/4Nc6hvzn/2024-03-29-01-21-00.png)](https://postimg.cc/HVpcqyvC)
+[![2024-06-06-10-04-03.png](https://i.postimg.cc/XY7pWr5Z/2024-06-06-10-04-03.png)](https://postimg.cc/xch0yTtY)
 
 ### Функционал проекта.
 
-На данный момент, пока готова только страница отображения со стилями.
+Сайт
 
 ## Для локального запуска проекта 
 
@@ -17,4 +17,4 @@
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Ссылка на репозиторий
-https://github.com/enclosser/ono-tebe-nado
+https://github.com/enclosser/zakrivayuschiy-teg-f
