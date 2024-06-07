@@ -15,7 +15,13 @@
 */
 .page {
   color: var(--accent-color, #fff);
-  background-image: var(--background);
+  background-image: var(
+    --background,
+    repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a)
+  );
+  /* Я не смог придумать, что сюда поставить, поставил принудительный градиент, но мне не нравится как выглядит*/
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -33,7 +39,7 @@
   margin-block-start: 102px;
   margin-block-end: 100px;
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family, sans-serif);
   text-transform: uppercase;
   background-color: var(--background-color, #fff);
   max-inline-size: 696px;
@@ -122,7 +128,7 @@
 
 .card__title {
   padding: 3px 24px 3px 10px;
-  font-family: var(--main-font-family);
+  font-family: var(--main-font-family, sans-serif);
   font-size: 18px;
   font-style: normal;
   line-height: normal;
@@ -147,14 +153,15 @@
   right: 25px;
   z-index: 1;
   opacity: 0.5;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: normal;
   text-shadow: 0 0 2px var(--shadow, #000);
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px var(--background-color, #000)) or (text-stroke: 1px var(--background-color, #000)) {
+@supports (-webkit-text-stroke: 1px var(--background-color, #000)) or
+  (text-stroke: 1px var(--background-color, #000)) {
   .image-link {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color, #000);
@@ -167,12 +174,12 @@
 }
 
 .card__text {
-  font-family: var(--main-font-family);
+  margin-block-end: 25px;
+  font-family: var(--main-font-family, sans-serif);
   font-size: 18px;
   font-style: normal;
   line-height: 21px;
   font-variation-settings: "wght" var(--main-text-weight);
-  margin-block-end: 25px;
 }
 
 .card__text:last-child {
@@ -209,13 +216,14 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color, #000);
   box-shadow: 0 0 0 2px var(--accent-color, #000);
+  outline: 2px solid var(--accent-color, #000);
+  transition: 0.3s ease;
 }
 
 .button__text {
   color: var(--but-accent-color, #000);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   font-style: normal;
   line-height: 90%;
@@ -295,17 +303,18 @@
 }
 
 .modal {
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+  min-height: 193px;
   /* position: relative; */
   border: 2px solid var(--accent-color, #000);
   padding: 25px 30px;
   color: var(--accent-color, #fff);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family, sans-serif);
   line-height: 1.5;
   text-transform: uppercase;
   background: var(--background-color, #fff);
-  max-inline-size: 355px;
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
+  max-inline-size: 357px;
 }
 
 .modal::backdrop {
@@ -317,11 +326,11 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: var(--accent-font-family);
+  margin-bottom: 30px;
+  font-family: var(--accent-font-family, sans-serif);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 
 .modal__icon {
