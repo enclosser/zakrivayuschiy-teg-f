@@ -15,12 +15,10 @@
 */
 .page {
   color: var(--accent-color, #fff);
-  background-image: var(
-    --background,
-    repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a)
-  );
+  background-image: var(--background,
+      repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a));
   /* Я не смог придумать, что сюда поставить, поставил принудительный градиент, но мне не нравится как выглядит*/
   background-size: cover;
   background-attachment: fixed;
@@ -160,8 +158,7 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px var(--background-color, #000)) or
-  (text-stroke: 1px var(--background-color, #000)) {
+@supports (-webkit-text-stroke: 1px var(--background-color, #000)) or (text-stroke: 1px var(--background-color, #000)) {
   .image-link {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color, #000);
@@ -221,6 +218,11 @@
   transition: 0.3s ease;
 }
 
+.button {
+  border: 2px solid var(--accent-color, #000);
+  background: var(--background-color, #fff);
+}
+
 .button__text {
   color: var(--but-accent-color, #000);
   font-family: var(--accent-font-family, sans-serif);
@@ -237,7 +239,6 @@
 .button-animated {
   position: relative;
   border: 2px solid var(--accent-color, #000);
-  background-color: var(--background-color, #fff);
   transition: box-shadow 0.3s;
 }
 
@@ -271,7 +272,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--accent-color, #000);
   padding: 11px 0;
   background: transparent;
   cursor: pointer;
@@ -286,7 +286,6 @@
   gap: 10px;
   margin-inline: auto;
   margin-block-end: 105px;
-  border: 2px solid var(--accent-color, #000);
   padding: 15px 20px;
   cursor: pointer;
 }
@@ -306,7 +305,6 @@
   grid-template-rows: repeat(2, min-content);
   gap: 30px;
   min-height: 193px;
-  /* position: relative; */
   border: 2px solid var(--accent-color, #000);
   padding: 25px 30px;
   color: var(--accent-color, #fff);
